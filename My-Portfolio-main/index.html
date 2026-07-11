@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDHI JAIN | Portfolio</title>
+    <link rel="shortcut icon" href="media/—Pngtree—icon of a female developer_21179292.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: #090f1c;
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #38bdf8;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero-content img {
+            margin-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero-content h1 span {
+            color: #38bdf8;
+        }
+
+        .hero-content p {
+            margin: 20px;
+            max-width: 1150px;
+            color: #cbd5e1;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #38bdf8;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+
+        }
+
+        .btn:hover {
+            background-color: #150306;
+            transition: .5s
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            position: relative;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #38bdf8;
+        }
+
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+
+        }
+
+        .about img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 15px;
+            text-align: center;
+            border-radius: 15px;
+            transition: .3s;
+        }
+
+        .skill:hover {
+            background-color: #38bdf8;
+            transform: translateY(-10px);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #1e293b;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+        }
+
+        .project img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            background: #1e293b;
+            color: white;
+        }
+
+
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+        }
+        .contact img{
+            margin-top: 20px;
+            padding: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            height: 60px;
+        }
+        
+        @media(max-width:768px) {
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Vidhi's Portfolio</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="media/vidhu.png" alt="" width="40%">
+            <div>
+                <h1>Hello, I'm <span class="auto-type"></span></h1>
+            </div>
+
+            <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+            <script>
+                var typed = new Typed(".auto-type", {
+                    strings: ["Vidhi Jain", "Front-end Developer", "Web Developer", "Dashboard Designer", "Vidhi Jain"],
+                    typeSpeed: 150,
+                    backSpeed: 150,
+                    looped: true
+
+                })
+            </script>
+
+
+            <p>
+                Web Developer | Frontend Developer | UI/UX Designer | Python Developer
+                <br> Creating modern and responsive websites with beautiful user experiences.
+            </p>
+            <a href="#projects" class="btn">View Projects</a>
+            
+        </div>
+        
+
+    </section>
+
+
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+            <img src="media/—Pngtree—icon of a female developer_21179292.png" alt="Profile">
+
+            <div>
+                <h2>Who Am I?</h2>
+                <br>
+                <p>
+                    I'm Vidhi Jain, a passionate, motivated and ambitious web developer or frontend developer who
+                    completed BCA from Silver Oak with the strong passion for technology and continuous learning. Beyond
+                    technical skills, i value creativity,teamwork and problem-solving.
+                    My goal is to leverage my skills, passion and dedication to create innovative and contribute to
+                    innovative projects for continuously push the boundaries of what technology can achieve.
+                    I also enjoy learning new technologies and turning ideas into reality.
+                    Currently exploring full-stack development, Python, UI/UX design,
+                    and modern frameworks.
+                </p>
+                <br>
+                <h3>
+
+                    <br> <b>"Curious mind. Creative thinker. Passionate developer."</b>
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill"><img src="media/c-.png" alt="" width="90%"><br>C/C++</div>
+            <div class="skill"><img src="media/html.png" alt="" width="85%">HTML</div>
+
+            <div class="skill"><img src="media/css-3.png" alt="" width="85%"><br>CSS</div>
+            <div class="skill"><img src="media/js.png" alt="" width="85%">JavaScript</div>
+            <div class="skill"><img src="media/python.png" alt="" width="85%">PYTHON</div>
+            <div class="skill"><img src="media/icons8-django-100.png" alt="" width="85%">DJANGO</div>
+            <div class="skill"><img src="media/ux-design.png" alt="" width="85%">UI/UX</div>
+            <div class="skill"><img src="media/New_Power_BI_Logo.svg" alt="" width="85%">POWERBI</div>
+            <div class="skill"><img src="media/database.png" alt="" width="85%"><br>SQL</div>
+            <div class="skill"><img src="media/Microsoft_Office_Word_Logo_512px.png" alt="" width="90%"><br>MS WORD</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project">
+                <img src="media/Screenshot 2026-07-11 164751.png" alt="">
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>Modern responsive personal portfolio website.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="media/vidhiweb.jpeg" alt="">
+            <div class=" project-content">
+                <h3>Amezon Clone Website</h3>
+                <p>Online shopping website with modern UI.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/CAR.jpeg" alt="">
+            <div class="project-content">
+                <h3>Car Info Website</h3>
+                <p>Shows information about various cars such as prices, specifications, and reviews, also you can contact for buy a new one.</p>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea rows="5" placeholder="Your Message"></textarea>
+
+                <button class="btn">Send Message</button>
+            </form>
+                <a href="https://www.linkedin.com/in/vidhijain-in/" s>
+                    <img src="media/linkedin (1).png" alt="" width="30px">
+                </a>
+                
+                <a href="https://github.com/vidhi201005-afkw">
+                    <img src="media/github.png" alt="" width="30px">
+                </a>
+                <a href="https://www.instagram.com/jainvidhi7?igsh=MWt6dWF1d2JzeDZycA==">
+                    <img src="media/instagram.png" alt="" width="30px">
+                </a>
+                <a href="mailto:vidhi201005@gmail.com">
+                    <img src="media/gmail-new-2020-seeklogo.png" alt="" width="30px">
+                </a>
+                
+
+        </div>
+
+    </section>
+
+    <footer>
+        
+        <p>© 2026 Vidhi Jain. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+
+        window.addEventListener("scroll", () => {
+            sections.forEach(section => {
+                const top = window.scrollY;
+                const offset = section.offsetTop - 200;
+                const height = section.offsetHeight;
+
+                if (top >= offset && top < offset + height) {
+                    section.style.opacity = "1";
+                    section.style.transform = "translateY(0)";
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            section.style.opacity = "0";
+            section.style.transform = "translateY(50px)";
+            section.style.transition = "all 0.8s ease";
+        });
+    </script>
+
+</body>
+
+</html>
